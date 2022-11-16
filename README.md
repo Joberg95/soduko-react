@@ -1,6 +1,6 @@
 # soduko-react
 
-## use [this](https://github.com/navshaikh/sudoku-api) API for game data
+## use [this](https://github.com/navshaikh/sudoku-api) RestAPI for game data
 
 ## Setup cors proxy server as below: 
 ```
