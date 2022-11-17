@@ -21,7 +21,7 @@ function App() {
 
   function setGridValue(rowIndex, cellIndex, value) {
     const newGrid = [...grid];
-    newGrid[rowIndex][cellIndex] = value; // set the value with mutation and then update state
+    newGrid[rowIndex][cellIndex] = value;
     setGrid(newGrid);
 
     console.log(newGrid);
@@ -49,9 +49,9 @@ function App() {
         method: "POST",
       }
     );
-    const json = await response.json(); // parses JSON response into native JavaScript objects
+    const json = await response.json();
     const solution = json.data[0].solution;
-    const newGrid = new Array(9).fill(0).map(() => new Array(9).fill(0)); // fill board/grid with 0s
+    const newGrid = new Array(9).fill(0).map(() => new Array(9).fill(0));
 
     for (let rowIndex = 0; rowIndex < grid.length; rowIndex++) {
       for (let cellIndex = 0; cellIndex < grid[rowIndex].length; cellIndex++) {
@@ -70,7 +70,6 @@ function App() {
         <h1>Soduko</h1>
       </div>
       <div className="grid grid-cols-9 w-[50vh]">
-        {/* Todo: remove arrow dropdown */}
         {grid.map((row, rowIndex) => (
           <div key={rowIndex} className="row">
             {row.map((number, cellIndex) => (
